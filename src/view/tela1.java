@@ -139,20 +139,15 @@ public class tela1 extends javax.swing.JFrame {
         int x, y, z;
         String mat;
         mat = materia.getText();
-        
+
         x = parseInt(nota1.getText());
         y = parseInt(nota2.getText());
         z = parseInt(nota3.getText());
-        
+
         int resultado = media.calcular(x, y, z);
-        impressao.imprimirMedia(resultado);
+        aprovado.setText(impressao.imprimirMedia(resultado));
         mediaFinal.setText("A média final na matéria " + mat + " é " + resultado + ".");
-        
-        if(resultado >= 70) {
-            aprovado.setText("Aluno aprovado!");
-        } else {
-            aprovado.setText("Aluno reprovado!");
-        }
+
     }//GEN-LAST:event_btn_calcActionPerformed
 
     /**
@@ -181,7 +176,7 @@ public class tela1 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(tela1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
